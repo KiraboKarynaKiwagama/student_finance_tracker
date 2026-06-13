@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root{
+    --primary-color: #f5bcc1;
+    --secondary-color: #c97b8a;
+    --heading-color:#3f0a29;
+    --text-color: #6b1045;
+    --warning-color: #cf2600;
+    --btn-primary:#d4789a;
+    --btn-primary-hover: #b85c7a;
+    --border-color: #e6b8c0;
+    --border-focus-color: #c97b8a;
+    --error-color: #b05252;
+    --error-bg: #fceaea;
+
+    --shadow-color:#3f0a29;
+
+    --font-headings: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --font-small-size: 0.9rem;
+    --font-medium-size: 1.1rem;
+    --font-large-size: 1.5rem;
+
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 12px;
+
+    --shadow-light:  rgb(95, 1, 1);
+
+    --transition-duration: 0.3s;
+
+}
+
+
+html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ box-sizing: border-box;
+}
+
+header{
+    font-family: var(--font-headings);
+    font: var(--font-large-size);
+    color: var(--heading-color);
+    background-color: var(--secondary-color);
+
+}
+
+body{
+ background-color: var(--primary-color);
+ border-radius: var(--radius-medium);
+}
+
+h1 {
+ color: var(--heading-color);
+}
+
+h2 {
+ color: var(--heading-color);
+}
+
+h3 {
+color: var(--heading-color);
+}
+
+p {
+ color: var(--text-color);
+}
+
+a {
+ color: var(--text-color);
+}
+
+a:hover {
+
+}
+
+a:focus {
+
+}
+
+nav {
+
+}
+
+nav ul {
+
+}
+
+nav ul li {
+
+}
+
+nav ul li a {
+
+}
+
+nav ul li a:hover {
+
+}
+
+nav ul li a.active {
+
+}
+
+main {
+
+}
+
+section {
+
+}
+
+button{
+ font-size: var(--font-small-size);
+ color: var(--text-color);
+ background-color: var(--btn-primary);
+ border-radius: var(--radius-medium);
+ border: 10px;
+ border-color: var(--border-color);
+}
+
+button:hover{
+ background-color: var(--btn-primary-hover);
+ border-radius: var(--radius-small);
+ border: 20px;
+ border-color: var(--border-color);
+}
+
+button:focus{
+ border-color: var(--border-focus-color);
+}
+
+button:active{
+
+}
+
+input{
+    background-color: whitesmoke;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-small);
+}
+
+footer{
+ background-color: var(--secondary-color);
+ 
+}
+
+@media (min-width: 768px) {
+
+    .header-inner {
+        flex-direction: row;        /* logo and nav side by side */
+        align-items: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;   /* 2 stat cards per row */
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;  /* all 4 in a row */
+    }
+
+    main {
+        padding: 48px;  /* more padding on larger screens */
+
+}
+
+
+

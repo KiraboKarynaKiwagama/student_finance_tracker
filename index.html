@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles/components.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-</head>
     <title>Document</title>
 </head>
 
@@ -30,19 +29,22 @@
     </header>
 
     <main id="main-content">
-        <section id="welcome">
-            <h1>Welcome to The Girly Pop Student Finance Tracker</h1>
+        <div class="card" id="welcome">
+            <h2>Welcome to The Girly Pop Student Finance Tracker</h2>
             <p class="eye-catcher"> This is a web application designed to help students (especially the girly pops) manage their finances effectively. You do not have to limit yourself but that does not mean you must spend willy nilly. Life is for living but living wisely. With our user-friendly interface, you can easily track your income and expenses, set budgets, and gain insights into your financial habits. Be as honest with yourself and your finances. Have fun grily pop. Get saving and spending!</p>
-        <h2>Contact Information</h2>
-        
-        <p>
-            Name: Kirabo Karyna Kiwagama
-            <br>
-            Email: k.kiwagama@alustudent.com
-            <br>
-            Github: <a href="https://github.com/KiraboKarynaKiwagama" target="_blank">KiraboKarynaKiwagama</a>
-        </p>
-        </section>
+        </div>
+
+        <div class="card">
+            <h2>Contact Information</h2>
+            <p>
+                Name: Kirabo Karyna Kiwagama
+                <br>
+                Email: k.kiwagama@alustudent.com
+                <br>
+                Github: <a href="https://github.com/KiraboKarynaKiwagama" target="_blank">KiraboKarynaKiwagama</a>
+            </p>
+        </div>
+    </section>
 
 
     <section  id="dashboard">
@@ -77,12 +79,7 @@
         aria-atomic="true">
         </div>
 
-        <div class="card">
-            <h3> Last 7 days</h3>
-            <div id="chart-container" aria-label="7 day spending chart">
-            
-            </div>
-        </div>
+
 
     </section>
 
@@ -102,13 +99,14 @@
                 <p id="search-error" role="alert" aria-live="assertive"></p>
         </div>
 
-        <div class="table wrapper">
+        <div class="table-wrapper">
             <table id="records-table">
                 <thead>
                     <tr>
                         <th scope="col">Date</th>
                         <th scope="col">Description</th>
                         <th scope="col">Category</th>
+                        <th scope="col">Type</th>
                         <th scope="col">Amount</th>
                     </tr>
                 </thead>
@@ -124,6 +122,17 @@
         <input type="hidden" id="edit-id">
 
         <form id="transaction-form">
+
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select id="type" name="type" required>
+                    <option value="">Select type</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <span class="error" id="type-error"></span>
+            </div>
+
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
 
@@ -151,7 +160,7 @@
 
     <section  id="settings">
         <h2>Settings</h2>
-        <div class=" card settings-form">
+        <div class="card settings-form">
             <h3>Currency Settings</h3>
 
             <div class="form-group">
@@ -188,7 +197,7 @@
                  <input type="text" id="new-category">
                  <span class="error-msg" id="new-category-error"></span>   
                  <button type="button" id="add-category-btn">Add</button>
-            </div>
+                </div>
 
             <div class="card settings-card">
                 <h3>Spending Cap</h3>
@@ -196,17 +205,21 @@
                     <label for="spending-cap">Monthly cap amount:</label>
                     <input type="text" id="spending-cap" placeholder="e.g. 50000">
                 </div>
+                
+                <label for="theme">Theme:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="default">Default</option>
+
+                </select>
+
+                <br>
+                <br>
                 <button type="button" id="save-settings-btn">Save Settings</button>
-                <p id="settings-status" role="status" aria-live="polite"></p><p id="settings-status" role="status" aria-live="polite"></p>
+                    <p id="settings-statuses" role="status" aria-live="polite"></p><p id="settings-status" role="status" aria-live="polite"></p>
             </div>
 
-            <label for="theme">Theme:</label>
-            <select id="theme" name="theme">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-            </select>
-
-            <button type="submit">Save Settings</button>
         </div>
     </section>
     </main>
